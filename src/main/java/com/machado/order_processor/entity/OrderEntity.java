@@ -21,7 +21,7 @@ public class OrderEntity {
     @Field(targetType = FieldType.DECIMAL128)
     private BigDecimal totalPrice;
 
-    private List<OrderProduct> orderItemList;
+    private List<OrderItem> orderItemList;
 
     public OrderEntity() {
     }
@@ -50,11 +50,11 @@ public class OrderEntity {
         this.totalPrice = totalPrice;
     }
 
-    public List<OrderProduct> getOrderItemList() {
+    public List<OrderItem> getOrderItemList() {
         return orderItemList;
     }
 
-    public void setOrderItemList(List<OrderProduct> orderItemList) {
+    public void setOrderItemList(List<OrderItem> orderItemList) {
         this.orderItemList = orderItemList;
     }
 }

@@ -5,7 +5,7 @@ import org.springframework.data.mongodb.core.mapping.FieldType;
 
 import java.math.BigDecimal;
 
-public class OrderProduct {
+public class OrderItem {
 
     private String product_name;
 
@@ -14,7 +14,13 @@ public class OrderProduct {
     @Field(targetType = FieldType.DECIMAL128)
     private BigDecimal price;
 
-    public OrderProduct() {
+    public OrderItem() {
+    }
+
+    public OrderItem(String product_name, Integer quantity, BigDecimal price) {
+        this.product_name = product_name;
+        this.quantity = quantity;
+        this.price = price;
     }
 
     public String getProduct_name() {
